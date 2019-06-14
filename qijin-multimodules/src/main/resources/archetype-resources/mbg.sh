@@ -119,14 +119,14 @@ key_reserved_words=("accessible " "action" "add " "after" "against" "aggregate" 
 
 # check mysql reserved word
 echo "======== [INFO] start to check mysql keywords and reserved words. Reference: https://dev.mysql.com/doc/refman/5.7/en/keywords.html ========"
-for model in `ls ${model_path}`;do
-    tb_file=`camel_to_lowercase $model`
-    tb_name=`basename $tb_file .java`
-    camel=`cat ${model_path}/$model | grep "private" | cut -d' ' -f7 | cut -d';' -f1`
-    for i in ${camel[@]};do
-        lowercase=`camel_to_lowercase $i`
-        if [[ " ${key_reserved_words[@]} " =~ " ${lowercase} " ]]; then
-            echo "${YELLOW} ======== [WARNING] ${RED}${BOLD}$lowercase ${NORMAL}${YELLOW}in table ${RED}${BOLD}${tb_name} ${NORMAL}${YELLOW}is mysql keyword or reserved word. ========"
-        fi
-    done
-done
+#for model in `ls ${model_path}`;do
+#    tb_file=`camel_to_lowercase $model`
+#    tb_name=`basename $tb_file .java`
+#    camel=`cat ${model_path}/$model | grep "private" | cut -d' ' -f7 | cut -d';' -f1`
+#    for i in ${camel[@]};do
+#        lowercase=`camel_to_lowercase $i`
+#        if [[ " ${key_reserved_words[@]} " =~ " ${lowercase} " ]]; then
+#            echo "${YELLOW} ======== [WARNING] ${RED}${BOLD}$lowercase ${NORMAL}${YELLOW}in table ${RED}${BOLD}${tb_name} ${NORMAL}${YELLOW}is mysql keyword or reserved word. ========"
+#        fi
+#    done
+#done
