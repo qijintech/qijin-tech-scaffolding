@@ -42,6 +42,7 @@ under the License.
             <directory></directory>
             <includes>
                 <include>update.sh</include>
+                <include>updateVersion.sh</include>
                 <include>gitignore</include>
             </includes>
         </fileSet>
