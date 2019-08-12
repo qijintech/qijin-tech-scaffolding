@@ -40,10 +40,6 @@
             </Policies>
         </RollingRandomAccessFile>
 
-
-        <CatAppender name="CatAppender"/>
-
-
     </Appenders>
 
 
@@ -56,7 +52,6 @@
         </Logger>
         <Root level="info">
             <AppenderRef ref="RootLog"/>
-            <AppenderRef ref="CatAppender"/>
         </Root>
     </Loggers>
 </Configuration>
